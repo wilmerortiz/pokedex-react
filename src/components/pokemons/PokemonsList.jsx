@@ -36,8 +36,8 @@ export const PokemonsList = () => {
   }
 
   return (
-    <>
-      <h1>Pokemons List</h1>
+    <div className="wrapper">
+      <h1>POKEDEX</h1>
       {
         loadingPokemon ? <p>Loading...</p>
           : errorPokemon ? <p>{errorPokemon}</p>
@@ -49,7 +49,7 @@ export const PokemonsList = () => {
               </div>
               : <p>No pokemons found</p>
       }
-    </>
+    </div>
   )
 
 }
