@@ -26,10 +26,10 @@ const imageTypes = (type) => {
 const coloursType = (type) => {
     const colours = {
         normal: '#A8A77A',
-        fire: '#EE8130',
+        fire: '#ee3030',
         water: '#6390F0',
         electric: '#F7D02C',
-        grass: '#7AC74C',
+        grass: '#58c74c',
         ice: '#96D9D6',
         fighting: '#C22E28',
         poison: '#A33EA1',
@@ -48,6 +48,44 @@ const coloursType = (type) => {
     return colours[type] || '#777';
 }
 
+const listTypes = [
+    {
+        name: 'bug', color: coloursType('bug'), image: imageTypes('bug')
+    }, {
+        name: 'dark', color: coloursType('dark'), image: imageTypes('dark')
+    }, {
+        name: 'dragon', color: coloursType('dragon'), image: imageTypes('dragon')
+    }, {
+        name: 'electric', color: coloursType('electric'), image: imageTypes('electric')
+    }, {
+        name: 'fairy', color: coloursType('fairy'), image: imageTypes('fairy')
+    }, {
+        name: 'fighting', color: coloursType('fighting'), image: imageTypes('fighting')
+    }, {
+        name: 'fire', color: coloursType('fire'), image: imageTypes('fire')
+    }, {
+        name: 'flying', color: coloursType('flying'), image: imageTypes('flying')
+    }, {
+        name: 'grass', color: coloursType('grass'), image: imageTypes('grass')
+    }, {
+        name: 'ground', color: coloursType('ground'), image: imageTypes('ground')
+    }, {
+        name: 'ice', color: coloursType('ice'), image: imageTypes('ice')
+    }, {
+        name: 'normal', color: coloursType('normal'), image: imageTypes('normal')
+    }, {
+        name: 'poison', color: coloursType('poison'), image: imageTypes('poison')
+    }, {
+        name: 'psychic', color: coloursType('psychic'), image: imageTypes('psychic')
+    }, {
+        name: 'rock', color: coloursType('rock'), image: imageTypes('rock')
+    }, {
+        name: 'steel', color: coloursType('steel'), image: imageTypes('steel')
+    }, {
+        name: 'water', color: coloursType('water'), image: imageTypes('water')
+    }
+]
+
 const capitalize = (text) => {
     return text[0].toUpperCase() + text.substring(1)
 }
@@ -55,5 +93,6 @@ const capitalize = (text) => {
 module.exports = {
     imageTypes,
     coloursType,
-    capitalize
+    capitalize,
+    listTypes,
 }
